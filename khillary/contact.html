@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | VERVE GRUB</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="container header-flex">
+            <div class="logo">
+                <img src="images/Verve-Grub-logo.PNG" alt="Verve Grub Logo" class="logo-img">
+                <span class="logo-text">VERVE GRUB</span>
+            </div>
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="process.html">Our Process</a></li>
+                        <a href="products.html">Products </a>
+                    </li>
+                    <li><a href="index.html#impact">Impact</a></li>
+                    <li><a href="contact.html" class="active">Contact Us</a></li>
+                </ul>
+            </nav>
+            <div class="header-cta">
+                <a href="contact.html" class="btn-cta">Request Quote</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="page-hero contact-hero">
+        <div class="hero-overlay"></div>
+        <div class="container hero-content">
+            <h1>Get in Touch With Us</h1>
+            <p>Ready to place an order, supply waste, or partner up? Let's connect.</p>
+        </div>
+    </section>
+
+    <section class="section-padding" style="background-color: #ffffff;">
+    <div class="container grid-two-col">
+        
+        <div class="contact-info-sidebar">
+            <h2 style="color: #2a3d1d; margin-bottom: 25px; font-size: 1.8rem;">Get In Touch</h2>
+            <p style="color: #666; margin-bottom: 30px;">Reach out directly to our team via our official channels or visit our composting hubs. We respond to all inquiries within 24 hours.</p>
+            
+            <div class="info-item">
+                <svg class="green-svg-icon" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+                <span>Mbale, Uganda</span>
+            </div>
+
+            <div class="info-item">
+                <svg class="green-svg-icon" viewBox="0 0 24 24"><path d="M20.01 15.38c-1.23 0-2.42-.2-3.53-.56a.977.977 0 0 0-1.01.24l-2.2 2.2c-2.83-1.44-5.15-3.75-6.59-6.59l2.2-2.21c.28-.26.36-.65.25-1A11.36 11.36 0 0 1 8.5 4c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1 0 9.39 7.61 17 17 17 .55 0 1-.45 1-1v-3.59c0-.55-.45-1-1-1z"/></svg>
+                <span>+256759377837</span>
+            </div>
+
+            <div class="info-item">
+                <svg class="green-svg-icon" viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+                <span>info@vervegrub.com</span>
+            </div>
+
+            <div class="info-item">
+                <svg class="green-svg-icon" viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/></svg>
+                <span>Mon - Sat: 8:00 AM - 5:00 PM</span>
+            </div>
+        </div>
+
+       <div class="contact-form-wrapper">
+    <h2>Send Us a Message / Request Quote</h2>
+    <form id="whatsappForm" class="contact-form">
+        <div class="form-group">
+            <label for="name">Full Name or Company Name</label>
+            <input type="text" id="name" name="name" required placeholder="e.g. Mukasa Poultry Farm">
+        </div>
+        
+        <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone" required placeholder="e.g. 0700000000">
+        </div>
+
+        <div class="form-group">
+            <label for="interest">What are you interested in?</label>
+            <select id="interest" name="interest">
+                <option value="High-Protein Animal Feed (BSF Larvae)">High-Protein Animal Feed (BSF Larvae)</option>
+                <option value="Verve Grub Bio-Fertilizer (Frass)">Verve Grub Bio-Fertilizer (Frass)</option>
+                <option value="Organic Waste Supply / Market Partnership">Organic Waste Supply / Market Partnership</option>
+                <option value="General Inquiry">General Inquiry</option>
+            </select>
+        </div>
+        
+        <button type="submit" class="btn-submit" style="margin-top: 10px;">Submit Request</button>
+    </form>
+</div>
+
+<script>
+document.getElementById('whatsappForm').addEventListener('submit', function(e) {
+    e.preventDefault(); // Prevents the page from refreshing
+
+    // 1. REPLACE THIS WITH YOUR REAL WHATSAPP NUMBER (with Uganda country code 256, no plus sign)
+    const whatsappNumber = "+256759377837"; 
+
+    // 2. Grab the information the user typed in
+    const name = document.getElementById('name').value;
+    const phone = document.getElementById('phone').value;
+    const interest = document.getElementById('interest').value;
+
+    // 3. Format the message into a professional layout
+    const message = `Hello Verv Grubs! I would like to request a quote.%0A%0A` +
+                    `*Name:* ${encodeURIComponent(name)}%0A` +
+                    `*Phone:* ${encodeURIComponent(phone)}%0A` +
+                    `*Interested In:* ${encodeURIComponent(interest)}`;
+
+    // 4. Open the WhatsApp link in a clean new tab
+    const whatsappURL = `https://wa.me/${whatsappNumber}?text=${message}`;
+    window.open(whatsappURL, '_blank');
+});
+</script>
+</section>
+
+        </div>
+    </section>
+    <footer class="main-footer-compact">
+        <div class="container footer-grid-compact">
+            
+            <div class="footer-brand-compact">
+                <div class="logo">
+                    <img src="images/Verve-Grub-logo.PNG" alt="Verve Grub Logo" class="logo-img" style="height: 32px;">
+                    <span class="logo-text" style="color: #ffffff; font-size: 20px;">VERVE GRUB</span>
+                </div>
+                <p>Insect-powered agribusiness inputs lowering feeding costs and restoring soil across Uganda.</p>
+            </div>
+            
+            <div class="footer-socials-compact">
+                <div class="social-icons-compact">
+                    <a href="https://wa.me/+256759377837" target="_blank" class="social-btn-compact whatsapp" aria-label="WhatsApp">
+                        <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.513 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.713-1.457L0 24zm6.59-4.846c1.66.986 3.288 1.481 4.91 1.481 5.432 0 9.855-4.343 9.858-9.683.001-2.587-1.002-5.019-2.825-6.845C16.76 2.28 14.342 1.278 11.76 1.278c-5.434 0-9.858 4.344-9.861 9.684-.001 1.83.512 3.513 1.482 4.922l-.973 3.551 3.649-.955zM17.65 14.86c-.322-.16-1.905-.94-2.202-1.05-.297-.11-.513-.16-.73.16-.216.32-.835 1.05-1.023 1.26-.188.21-.377.24-.7.08-.323-.16-1.362-.502-2.596-1.602-.96-.856-1.608-1.914-1.796-2.234-.188-.32-.02-.493.14-.653.146-.143.323-.377.485-.566.162-.188.216-.322.323-.537.108-.215.054-.403-.027-.563-.08-.16-.73-1.76-.999-2.41-.263-.633-.53-.547-.729-.557-.19-.01-.406-.01-.623-.01-.216 0-.567.08-.864.404-.297.324-1.135 1.11-1.135 2.707 0 1.597 1.162 3.136 1.323 3.352.162.215 2.288 3.5 5.544 4.905.774.334 1.379.533 1.85.683.777.247 1.484.212 2.043.129.623-.093 1.905-.778 2.175-1.493.27-.715.27-1.33.189-1.458-.08-.13-.297-.21-.622-.37z"/></svg>
+                    </a>
+                    <a href="#" target="_blank" class="social-btn-compact facebook" aria-label="Facebook">
+                        <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c4.56-.93 8-4.96 8-9.75z"/></svg>
+                    </a>
+                    <a href="#" target="_blank" class="social-btn-compact x-twitter" aria-label="X / Twitter">
+                        <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                    </a>
+                    <a href="#" target="_blank" class="social-btn-compact linkedin" aria-label="LinkedIn">
+                        <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom-compact">
+            <p>&copy; 2026 VERVE GRUB. Feed the Future, Waste Nothing.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
